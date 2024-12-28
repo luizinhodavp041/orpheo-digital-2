@@ -3,30 +3,17 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --background: 0 0% 0%;
+    --text: 0 0% 100%;
+    --accent: 217 100% 50%;
+  }
+
   * {
     @apply box-border p-0 m-0;
   }
 
-  html {
-    @apply antialiased;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
   body {
-    @apply bg-black text-white overflow-x-hidden;
+    @apply bg-background text-text;
   }
-
-  ::selection {
-    @apply bg-black text-white;
-  }
-}
-
-/* Variáveis CSS customizadas */
-:root {
-  --max-width: 1440px;
-  --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
-    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
-    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 }

@@ -1,7 +1,12 @@
-import { Inter, Bebas_Neue } from "next/font/google";
+// src/app/layout.tsx
+import type { Metadata } from "next";
+import { bebasNeue, neueRegrade } from "@/lib/fonts";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+export const metadata: Metadata = {
+  title: "Orpheo Digital",
+  description: "Your awesome description",
+};
 
 export default function RootLayout({
   children,
@@ -9,8 +14,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={inter.className}>
+    <html lang="en" className={`${neueRegrade.variable}`}>
+      <body className={bebasNeue.className}>
         <main className="relative min-h-screen">{children}</main>
       </body>
     </html>

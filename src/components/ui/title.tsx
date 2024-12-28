@@ -1,15 +1,10 @@
-import { Bebas_Neue } from "next/font/google";
-
-const bebasNeue = Bebas_Neue({
-  weight: ["400"],
-  subsets: ["latin"],
-});
+import { bebasNeue } from "@/lib/fonts";
 
 export default function Title() {
   return (
-    <div className="w-[357px] h-[120px] mx-auto flex items-center justify-center">
+    <div className="w-[357px] h-[120px] flex items-center justify-center">
       <h1
-        className={`${bebasNeue.className} text-[100px] leading-none text-white`}
+        className={`${bebasNeue.className} text-text text-[100px] leading-none`}
       >
         ORPHEO
       </h1>
